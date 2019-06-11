@@ -7,7 +7,10 @@ import {
   ListItem,
   ListItemText,
   Checkbox,
+  ListItemSecondaryAction,
 } from '@material-ui/core';
+import DeleteIcon from '@material-ui/icons/Delete';
+
 import './App.scss';
 
 function App() {
@@ -35,6 +38,11 @@ function App() {
   const handleDone = id => () => {
     const index = todos.findIndex(todo => todo.id === id);
     todos[index].done = !todos[index].done;
+    setTodos([...todos]);
+  };
+  const handleDelete = id => () => {
+    const index = todos.findIndex(todo => todo.id === id);
+    todos.splice(index, 1);
     setTodos([...todos]);
   };
   return (
@@ -84,6 +92,11 @@ function App() {
                     }}
                   />
                   <ListItemText primary={todo.text} secondary={todo.done ? '完了' : '未完了'} />
+                  <ListItemSecondaryAction>
+                    <IconButton onClick={handleDelete(todo.id)}>
+                      <DeleteIcon />
+                    </IconButton>
+                  </ListItemSecondaryAction>
                 </ListItem>
               </List>
             ))}
