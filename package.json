@@ -16,6 +16,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "homepage": "http://suuungwoo.github.io/react-todos",
   "eslintConfig": {
     "extends": "react-app"
   },
