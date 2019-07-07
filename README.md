@@ -1,5 +1,5 @@
 # React Todos
-Reactで作成したTo Doアプリです
+Reactで作成したTo Doアプリ
 
 ## Dependency
 React
