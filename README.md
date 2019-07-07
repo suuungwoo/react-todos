@@ -5,8 +5,11 @@ Reactで作成したTo Doアプリです
 React
 
 ## Setup
+
+```
 $ yarn
 $ yarn start
+```
 
 ## Usage
 以下の機能があります
